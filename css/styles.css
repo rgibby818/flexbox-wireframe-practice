@@ -1,12 +1,14 @@
 :root {
     --border-raides: 10px;
 }
+
 body {
     background-color: #B1B5BE;
     color: white;
     display: flex;
     flex-direction: column;
 }
+
 .header-container {
     background-color: #9F2063;
 
@@ -21,14 +23,24 @@ body {
 }
 
 .main-container {
-    background-color:#23B87C ;
+    height: 60vh;
 
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 
     margin: 0rem 2rem 1rem 2rem;
+}
+
+.article-list-container {
+    background-color:#23B87C;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 75%;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
 }
 
@@ -47,17 +59,36 @@ body {
 }
 
 .aside-container {
-    height: 3rem;
     background-color: #116395;
+    height: 25%;
+    width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
 
-    margin: 0 2rem 1rem 2rem;
+    /* margin: 0 2rem 1rem 2rem; */
     border-radius: 10px;
     max-height: 100px;
+}
+
+@media (width > 700px) {
+    .main-container {
+        flex-direction: row-reverse;
+        align-items: start;
+        gap: 5px;
+    }
+
+    .article-list-container {
+        flex-grow: 1;
+        height: 100%;
+    }
+    .aside-container {
+        flex-grow: 0;
+        max-width: 20%;
+        min-height: 100%;
+    }
+    
 }
 
 .footer-container {
